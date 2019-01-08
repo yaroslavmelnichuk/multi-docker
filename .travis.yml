@@ -15,11 +15,10 @@ after_success:
     - docker build -t yar0/multi-nginx ./nginx
     - docker build -t yar0/multi-server ./server
     - docker build -t yar0/multi-worker ./worker
-
 # Login to the docker hub
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # TAKE IMAGES AND PUSH TO docker hub
-- docker push yar0/multi-client
-- docker push yar0/multi-server
-- docker push yar0/multi-nginx
-- docker push yar0/multi-worker
+    - docker push yar0/multi-client
+    - docker push yar0/multi-server
+    - docker push yar0/multi-nginx
+    - docker push yar0/multi-worker
