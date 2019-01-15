@@ -22,7 +22,7 @@
             "image": "yar0/multi-worker",
             "hostname": "worker",
             "essential": false,
-            "memory": 80
+            "memory": 128
 
         },
         {
